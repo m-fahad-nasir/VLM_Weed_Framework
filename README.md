@@ -32,7 +32,7 @@
 
 
 # Overview
-A Vision-Language Model based Framework for Weed Detection using Commercial VLMs in Zero-Shot Setting
+Weeds remain a major constraint to row-crop productivity, yet current deep learning approaches for UAV imagery often require extensive annotation, generalize poorly across fields, and provide limited interpretability. We investigate whether modern vision–language models (VLMs) can address these gaps in a zero-shot setting. Using drone images from soybean fields with ground-truth weed boxes, we evaluate six commercial VLMs, ChatGPT-4.1, ChatGPT-4o, Gemini Flash 2.5, Gemini Flash Lite 2.5, LLaMA-4 Scout, and LLaMA-4 Maverick under a unified prompt that elicits (i) weed presence, (ii) spatial localization, (iii) reasoning, (iv) crop growth stage, and (v) crop type. We further introduce Error-Probing Prompting (EPP), a counterfactual follow-up that forces re-analysis under the assumption that weeds are present, and we quantify self-correction with expert-rated interpretability scores (Grounding, Specificity, Plausibility, Non-Hallucination, Actionability). Across models, Gemini Flash 2.5 delivers the most consistent zero-shot performance and highest interpretability, ChatGPT-4.1 provides the strongest reasoning but lower raw detection, ChatGPT-4o offers a balanced profile, and LLaMA-4 variants lag in localization and specificity. Gemini Flash Lite 2.5 is efficient but fails EPP stress tests, revealing brittle reasoning. Visual grounding analysis and a text-to-region overlap metric show that interpretability tracks spatial correctness. Results highlight that explainability and feedback-driven adaptability not scale alone best predict reliability for field deployment, and position VLMs as promising, low-annotation tools for precision weed management. 
 <img width="2507" height="942" alt="Figure (3) - Methodology" src="https://github.com/user-attachments/assets/f14c5d6e-68ef-4850-85f7-03f48c2d91c1" />
 
 
@@ -45,7 +45,7 @@ This publication is based upon work supported by the Khalifa University of Scien
 ## Bibtex
 ```
 @article{Nasir2025agrisense,
-      title={Add Paper Title},
+      title={Vision–Language Models for Zero-Shot Weed Detection and Visual Reasoning in UAV-Based Precision Agriculture},
       author={Nasir, Muhammad Fahad, Rehman, Mobeen Ur, and Hussain, Irfan},
       journal={State Journal Name},
       volume={225},
