@@ -17,13 +17,13 @@
 </div>
 
 <h4 align="center">
-  <a href="https://arxiv.org/"><b>Paper</b></a> &nbsp;•&nbsp; 
+  <a href="https://arxiv.org/"><b>Paper (Coming Soon)</b></a> &nbsp;•&nbsp; 
   <a href="https://www.youtube.com/@Dr._Irfan_Robotics_Lab_KU"><b>Video</b></a>
 </h4>
 
 <div align="center">
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) &nbsp;&nbsp;&nbsp;&nbsp; <img height="65" alt="image" src="https://github.com/user-attachments/assets/f9af6b5d-b8f3-4ca9-9398-d1d01cea6262" />  &nbsp;&nbsp; <img height="65" alt="image" src="https://github.com/user-attachments/assets/5dd33fad-d340-4fa4-b47b-6b2c3e44819a"  />&nbsp;&nbsp; <img height="65" alt="image" src="https://github.com/user-attachments/assets/b50ab72b-f752-4941-9a6a-b0a0cfcecaa7" />
+<img height="65" alt="image" src="https://github.com/user-attachments/assets/f9af6b5d-b8f3-4ca9-9398-d1d01cea6262" />  &nbsp;&nbsp; <img height="65" alt="image" src="https://github.com/user-attachments/assets/5dd33fad-d340-4fa4-b47b-6b2c3e44819a"  />&nbsp;&nbsp; <img height="65" alt="image" src="https://github.com/user-attachments/assets/b50ab72b-f752-4941-9a6a-b0a0cfcecaa7" />
 
 </div>
 
@@ -36,20 +36,6 @@
 The study explores whether modern vision–language models (VLMs) can improve weed detection in crop fields using UAV imagery without extensive manual annotation. Six commercial VLMs: ChatGPT-4.1, ChatGPT-4o, Gemini Flash 2.5, Gemini Flash Lite 2.5, LLaMA-4 Scout, and LLaMA-4 Maverick were tested on drone images of soybean fields to assess weed presence, location, reasoning, crop growth stage, and type.
 
 A new method, Error-Probing Prompting (EPP), was introduced to test each model’s ability to self-correct and reason under counterfactual assumptions. Performance was rated on interpretability metrics such as grounding, specificity, plausibility, non-hallucination, and actionability.
-
-Key findings:
-
-- Gemini Flash 2.5 achieved the best overall and most interpretable results.
-
-- ChatGPT-4.1 showed the strongest reasoning but weaker detection.
-
-- ChatGPT-4o offered a balanced trade-off.
-
-- LLaMA-4 models underperformed in localization and detail.
-
-- Gemini Flash Lite 2.5 was efficient but fragile under EPP testing.
-
-Overall, the research shows that explainability and adaptability, rather than just model size, best predict VLM reliability for precision weed management with minimal annotation.
 
 <img width="1124" height="425" alt="Cropped" src="https://github.com/user-attachments/assets/65422a2a-ac83-4bc8-a6e8-6fb27565ac1b" />
 
