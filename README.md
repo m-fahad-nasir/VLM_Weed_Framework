@@ -52,7 +52,12 @@ This repo contains three Jupyter notebooks to run zero‑shot weed detection on 
 
 The notebooks iterate over a folder of images, send each image and a fixed prompt to the selected model, and save structured results to CSV/Excel.
 
----
+
+## 📁 Dataset
+
+You can download the dataset used in this study from the following link:  
+📥 [Google Drive – Dataset](https://drive.google.com/drive/folders/1s4LmaWyT2hOpbk4pm-X65qN5lNkH3K0a?usp=sharing)
+
 
 ## 1) Repository layout
 
