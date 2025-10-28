@@ -59,6 +59,102 @@ Weeds remain a major constraint to row-crop productivity, yet current deep learn
 <img width="2507" height="942" alt="Figure (3) - Methodology" src="https://github.com/user-attachments/assets/f14c5d6e-68ef-4850-85f7-03f48c2d91c1" />
 
 
+This repo contains three Jupyter notebooks to run zero‑shot weed detection on a folder of images using:
+- **Google Gemini 2.5 (Flash / Flash‑Lite)** – `Models/Weed_VLM_Gemini.ipynb`
+- **Meta LLaMA‑Vision via Together AI** – `Models/Weed_VLM_LLAMA.ipynb`
+- **OpenAI GPT‑4o (Vision)** – `Models/Weed_VLM_OpenAI.ipynb`
+
+The notebooks iterate over a folder of images, send each image and a fixed prompt to the selected model, and save structured results to CSV/Excel.
+
+---
+
+## 1) Repository layout
+
+```
+.
+├─ Models/
+│  ├─ Weed_VLM_Gemini.ipynb
+│  ├─ Weed_VLM_LLAMA.ipynb
+│  └─ Weed_VLM_OpenAI.ipynb
+├─ data/
+│  └─ Images/              # put all input images here (jpg/png/…)
+├─ outputs/
+│  ├─ WeedVLM_GPT_4o_outputs.csv          # OpenAI run
+│  ├─ gemini_flash_LITE_25_Fixed_weed_results.xlsx  # Gemini run
+│  └─ (additional CSVs as the notebooks write them)
+├─ requirements.txt
+└─ README.md
+```
+
+> If your notebooks currently reference absolute paths like `/Joint_Val` or `/WeedVLM_GPT_4o_outputs.csv`, update them to the relative repo paths shown above: `data/Joint_Val` and `outputs/...`.
+
+---
+
+## 2) Setup
+
+**Python 3.10+ is recommended.**
+
+```bash
+# clone your repo then in the repo root:
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux:
+source .venv/bin/activate
+
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+---
+
+## 3) API keys (add once, used by the notebooks)
+
+### In‑notebook placeholders (works but less secure)
+- **Gemini notebook** looks for `GOOGLE_API_KEY` and may have a line like:
+  ```python
+  os.environ["GOOGLE_API_KEY"] = "AI...your_key..."
+  ```
+  Replace the value **or** prefer the env‑var method above.
+- **Together/LLaMA notebook** has:
+  ```python
+  TOGETHER_API_KEY = ""
+  ```
+  Paste your key or use the env var and read it via `os.getenv("TOGETHER_API_KEY")`.
+- **OpenAI notebook** has:
+  ```python
+  openai.api_key = "sk-..."
+  ```
+  Replace it or use `os.getenv("OPENAI_API_KEY")` and set `openai.api_key` from that.
+
+---
+
+
+## 4) How to run
+
+Start Jupyter and run any notebook **top‑to‑bottom**:
+
+```bash
+jupyter lab
+# or
+jupyter notebook
+```
+
+Inside each notebook:
+1. Confirm the **image folder** is correct (default: `data/Joint_Val`).
+2. Confirm the **API key** is being read (either from env var or the inline placeholder).
+3. Run all cells. The notebooks will iterate images, call the model, and save results.
+
+### Outputs (by notebook)
+- **OpenAI** → `outputs/WeedVLM_GPT_4o_outputs.csv` (two columns like: `Image, GPT_Response`)
+- **Gemini** → `outputs/gemini_flash_LITE_25_Fixed_weed_results.xlsx` (and a CSV alongside if enabled; columns like: `Image, Gemini_Response`)
+- **LLaMA (Together)** → `outputs/llama_results.csv` (example name; check the cell that calls `to_csv`)
+
+> The Gemini notebook also writes Excel via `pandas.DataFrame.to_excel()`. We include `openpyxl` in `requirements.txt` to ensure this works.
+
+---
+
+
+
 # Results
 <table>
   <thead>
@@ -129,7 +225,6 @@ Weeds remain a major constraint to row-crop productivity, yet current deep learn
     </tr>
   </tbody>
 </table>
-
 
 
 ## Acknowledgements
