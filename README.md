@@ -17,7 +17,7 @@
 </div>
 
 <h4 align="center">
-  <a href="https://arxiv.org/"><b>Paper (Coming Soon)</b></a> &nbsp;•&nbsp; 
+  <a href="https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2025.1735096/full"><b>Paper</b></a> &nbsp;•&nbsp; 
   <a href="https://www.youtube.com/@Dr._Irfan_Robotics_Lab_KU"><b>Video</b></a>
 </h4>
 
