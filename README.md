@@ -224,12 +224,12 @@ This publication is based upon work supported by the Khalifa University of Scien
 
 ## Bibtex
 ```
-@article{Nasir2025agrisense,
-      title={Vision–Language Models for Zero-Shot Weed Detection and Visual Reasoning in UAV-Based Precision Agriculture},
-      author={Nasir, Muhammad Fahad, Rehman, Mobeen Ur, and Hussain, Irfan},
-      journal={State Journal Name},
-      volume={225},
-      pages={113487},
-      year={2025},
-      publisher={Elsevier}
-    }
+@article{nasir2026vision,
+  title={Vision-language models for zero-shot weed detection and visual reasoning in UAV-based precision agriculture},
+  author={Nasir, Muhammad Fahad and Rehman, Mobeen Ur and Hussain, Irfan},
+  journal={Frontiers in Plant Science},
+  volume={16},
+  pages={1735096},
+  year={2026},
+  publisher={Frontiers}
+}
